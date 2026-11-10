@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es el criptosistema de clave pública? | Blog Académico</title>
+    <!-- Enlazamos la misma hoja de estilos general -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar fijo -->
+    <header>
+        <div class="logo-container">
+            <h1>Blog Académico: Cómo funciona y cuáles son sus algoritmos representativos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal de la Entrada -->
+    <main class="entry-main">
+        
+        <!-- Enlace de retorno -->
+        <div class="back-navigation">
+            <a href="entrada1.html" class="back-navigation-back">&larr; Volver a la sección 1</a>
+            <a href="entrada3.html" class="back-navigation-next">Ir a la sección 3 &rarr;</a>
+        </div>
+
+        <article class="entry-content-box">
+            <!-- Metadatos y Título -->
+            <header class="entry-header">
+                <span class="entry-category">Seguridad en el Desarrollo de Software</span>
+                <h2>Cómo funciona y cuáles son sus algoritmos representativos</h2>
+                <p class="entry-meta">Publicado para la actividad académica de Cifrado Asimétrico | UNIMINUTO</p>
+            </header>
+
+            <!-- Imagen Destacada / Multimedia -->
+            <div class="entry-media">
+                <img src="images/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg" alt="Esquema conceptual de criptosistema de clave pública">
+            </div>
+
+            <!-- Cuerpo del Artículo (Lorem Ipsum / Estructura Base) -->
+            <section class="entry-body">
+                <p>El funcionamiento de un algoritmo de cifrado asimetrico se fundamenta en el protocolo <em>Diffie-Hellman</em>, con el fin de permitir una comunicación protegida entre dos interlocutores que nunca habían tenido contacto anteriormente, donde a través de una clave común o pública que transita por un canal inseguro, existiera la posibilidad de cifrar estos mensajes aún si un tercero se encontraba escuchando la conversación.</p>
+
+                <h3>¿Cómo opera el flujo de cifrado y descifrado?</h3>
+                <ul>
+                    <li><b>Generador de Claves</b><p>Para la generación del par de claves, el receptor las crea a condición de estar vinculadas matemáticamente, una de ellas es la clave privada exclusiva de ese usuario y la otra es la pública, que será compartida a través del canal inseguro a solicitud del emisor.</p></li>
+                    <li><b>Cifrado (Emisor)</b><p>Al momento de que un emisor requiera enviar un mensaje confidencial, toma la clave pública del receptor (destinatario), y por medio de una función matemáica, hace la transformación del texto claro a texto ciffrado o criptograma, el cual será enviado a través del canal inseguro hacia el destinatario.</p></li>
+                    <li><b>Descifrado (Receptor)</b><p>El receptor toma este mensaje cifrado y haciendo uso de su clave privada revierte el criptograma recuperando el mensaje original, esto es posible de manera segura debido a que se hace uso de las denominadas funciones unidireccionales, que son aquellas que resultan simples de solucionar en una dirección pero su operación inversa es sumamente compleja (computacionalmente inviable).</p></li>
+                </ul>
+
+                <h3>RSA (Rivest, Shamir y Adleman)</h3>
+                <p>Es actualmente de los criptosistemas más conocidos y utilizados, basado en la extrema dificultad que supone la factorización de un número entero grande siendo este producto producto de dos números primos gigantescos. Cuenta con gran facilidad de aplicación, siendo usado tanto para el cifrado de dartos como para firmas digitales, sin embargo, con el fin de garantizar su robustes se recomienda el uso de calves enormes, del orden de entre 2048 o 4096 bits, por esto se puede ver incluído con otras técnicas criptográficas.</p>
+                <h3>ELGAMAL</h3>
+                <p>Este es un algoritmo libre, es empleado en protocolos de comunicación como correos electrónicos seguros. Desarrollado en el año 1984 por Taher ElGamal se basa en el algoritmo <i>Diffie-Hellman</i> haciendo uso del calculo de logaritmos discretos para la seguridad de dicho sistema criptográfico. donde a pesar de ser pensado para la generación de firmas digitales, también ha tenido utilidad práctica en la encriptación de datos. </p>
+                <h3>ECC (Criptografía de Curva Elíptica)</h3>
+                <p>Sistema basado en las propiedad algebraicas de curvas elípticas sobre campos finitos. Este sistema nace de la necesidad de sistemas de cifrado pensados para dispositivos con poco poder de cálculo, debido a que algoritmos como RSA y ELGAMAL requieren almenos de claves de 2048 bits, se propuso el uso de un conjunto de grupos numéricos los cuales se forman a partir de un tipo especial de curvas, naciendo la <b>Criptografía Basada en Curvas Elípticas</b>. Estas cruvas se presentan en la ecuación de Weierstrass. Donde finalmente no se alcanza una seguridad tan estricta como en los sistemas basados en <i>Diffie-Hellman</i> pero lo suficientemente seguro para ser utilizado en entornos con limitaciones computacionales.</p>
+
+                <!-- Bloque de destaque técnico (Callout) -->
+                <div class="tech-callout">
+                    <strong>Nota de Arquitectura / Desarrollo Seguro:</strong> 
+                    <p>Se debe tener en cuenta que al configurar módulos criptográficos en los entornos de desarrollo, siempre se debe utilizar un algoritmo y longitud de clave adecuado basado en las recomendaciones indicadas por organismos de estandarización como el NIST.</p>
+                </div>
+
+                <!-- <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nixon ut dapibus.</p> -->
+            </section>
+
+            <!-- Sección de Referencias APA (Obligatorio por rúbrica) -->
+            <footer class="entry-references">
+                <h3>Referencias Bibliográficas</h3>
+                <ul>
+                    <li>Hernández, L. (2016). <em>La criptografía</em> (pp. 93-134). Editorial CSIC Consejo Superior de Investigaciones Científicas.</li>
+                    <li>Maillo, J. (2017). <em>Sistemas seguros de acceso y transmisión de datos</em> (pp. 76-102). RA-MA Editorial.</li>
+                </ul>
+            </footer>
+        </article>
+
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer id="info">
+        <p><strong>UNIMINUTO</strong> - Corporación Universitaria Minuto de Dios</p>
+        <p>Seguridad en el Desarrollo de Software | Actividad de Cifrado Asimétrico</p>
+        <p>Presentado por: Luis Enrique Ordoñez</p>
+        <p>&copy; 2026</p>
+    </footer>
+
+</body>
+</html>

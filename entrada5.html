@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es el criptosistema de clave pública? | Blog Académico</title>
+    <!-- Enlazamos la misma hoja de estilos general -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar fijo -->
+    <header>
+        <div class="logo-container">
+            <h1>Blog Académico: Observaciones y recomendaciones para implementar el criptosistema</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal de la Entrada -->
+    <main class="entry-main">
+        
+        <!-- Enlace de retorno -->
+        <div class="back-navigation">
+            <a href="entrada4.html" class="back-navigation-back">&larr; Volver a la sección 4</a>
+            <a href="index.html" class="back-navigation-next">Volver a la página principal &rarr;</a>
+        </div>
+
+        <article class="entry-content-box">
+            <!-- Metadatos y Título -->
+            <header class="entry-header">
+                <span class="entry-category">Seguridad en el Desarrollo de Software</span>
+                <h2>Observaciones y recomendaciones para implementar el criptosistema</h2>
+                <p class="entry-meta">Publicado para la actividad académica de Cifrado Asimétrico | UNIMINUTO</p>
+            </header>
+
+            <!-- Imagen Destacada / Multimedia -->
+            <div class="entry-media">
+                <img src="images/boitumelo-o_tcYADlSt8-unsplash.jpg" alt="Esquema conceptual de criptosistema de clave pública">
+            </div>
+
+            <!-- Cuerpo del Artículo (Lorem Ipsum / Estructura Base) -->
+            <section class="entry-body">
+                <p>Una correcta implementación de mecanismos de cifrado asimétricos no dependen solo del modelo matemático aplicado, sino de una cultura que impulsa la seguridad integral a lo largo de todo el ciclo de vida de desarrollo.</p>
+
+                <h3>Observaciones Críticas en la Integración Criptográfica</h3>
+                <p>Es común cometer errores estructurales durante las fases de diseño y desarrollo, lo cual puede comprometer la robustez y seguridad del sistema aún cuando se usan librerías criptográficas estandarizadas. Algunas de estas situaciones se pueden evidenciar en</p>
+
+                <ul>
+                    <li><b>Desacoplación Criptográfica</b><p>Durante el desarrollo de un proyecto de software se puede evidenciar el acoplamiento de algoritmos o longitudes de clave específicas (hardcodeadas), las cuales son prácticas NO sostenibles en el tiempo, más aún con la contínua aceleración del poder computacional. Dicho esto, las organizaciones deben buscar diseños que permitan actualizar y/o rotar los algoritmos criptográficos sin tener que pasar por refactorizaciones inviables.</p></li>
+                    <li><b>Manejo Inadecuado de Excepciones</b><p>En la implementación de los modelos criptográficos es muy importante tener en cuenta que llegar a silenciar excepciones críticas o registrar información sensible en logs, puede suponer vulnerabilidades severas para la solución.</p></li>
+                </ul>
+
+                <h3>Mejora Continua - Buenas Prácticas</h3>
+
+                <p>Con el fin de garantizar un servicio adecuado y de calidad se debe tener en cuenta modelos ensayados que permiten abarcar una gran cantidad de riesgos asociados, dentro de estos se encuentran los modelos de madures y estándares internacionales como ISO/IEC 25010.</p>
+
+                <ul>
+                    <li><b>Enfoque Seguridad Primero</b><p>Realizar pruebas y revisiones de seguridad desde el momento 1 del desarrollo y no solo al final bajo la mentalidad de solo "cumplir" un requisito más.</p></li>
+                    <li><b>Automatización de Análisis</b><p>Integración de herramientas automatizadas de validación o análisis de código, estandarizando los pipelines hacia producción, con el objetivo de detectar fallos tempranos y mitigando una gran cantidad de riesgos.</p></li>
+                    <li><b>Gobernanza y Rotación</b><p>La implementación de políticas y procedimientos claros y coherentes que brinden las herramientas estandarizadas a la organización para un correcto almacenamiento de llaves privadas, credenciales y delegación de responsabildiades a administradores secretos centralizados.</p></li>
+                </ul>
+
+                <!-- Bloque de destaque técnico (Callout) -->
+                <div class="tech-callout">
+                    <strong>Nota de Arquitectura / Desarrollo Seguro:</strong> 
+                    <p>La mejora continua es parte del ciclo de vida del desarrollo de software por ende la seguridad se debe ver como un proceso que evoluciona y se actualiza, no como un proceso estático que solo se mira al momento de una auditoría o cuando el daño ya está hecho.</p>
+                </div>
+
+                <!-- <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nixon ut dapibus.</p> -->
+            </section>
+
+            <!-- Sección de Referencias APA (Obligatorio por rúbrica) -->
+            <footer class="entry-references">
+                <h3>Referencias Bibliográficas</h3>
+                <ul>
+                    <li>Hernández, L. (2016). <em>La criptografía</em> (pp. 93-134). Editorial CSIC Consejo Superior de Investigaciones Científicas.</li>
+                    <li>Maillo, J. (2017). <em>Sistemas seguros de acceso y transmisión de datos</em> (pp. 76-102). RA-MA Editorial.</li>
+                </ul>
+            </footer>
+        </article>
+
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer id="info">
+        <p><strong>UNIMINUTO</strong> - Corporación Universitaria Minuto de Dios</p>
+        <p>Seguridad en el Desarrollo de Software | Actividad de Cifrado Asimétrico</p>
+        <p>Presentado por: Luis Enrique Ordoñez</p>
+        <p>&copy; 2026</p>
+    </footer>
+
+</body>
+</html>

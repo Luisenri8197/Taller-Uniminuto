@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es el criptosistema de clave pública? | Blog Académico</title>
+    <!-- Enlazamos la misma hoja de estilos general -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar fijo -->
+    <header>
+        <div class="logo-container">
+            <h1>Blog Académico: Cifrado Asimétrico</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal de la Entrada -->
+    <main class="entry-main">
+        
+        <!-- Enlace de retorno -->
+        <div class="back-navigation">
+            <a href="index.html" class="back-navigation-back">&larr; Volver a la sección princial</a>
+            <a href="entrada2.html" class="back-navigation-next">Ir a la sección 2 &rarr;</a>
+        </div>
+
+        <article class="entry-content-box">
+            <!-- Metadatos y Título -->
+            <header class="entry-header">
+                <span class="entry-category">Seguridad en el Desarrollo de Software</span>
+                <h2>¿Qué es el criptosistema de clave pública?</h2>
+                <p class="entry-meta">Publicado para la actividad académica de Cifrado Asimétrico | UNIMINUTO</p>
+            </header>
+
+            <!-- Imagen Destacada / Multimedia -->
+            <div class="entry-media">
+                <img src="images/markus-spiske-iar-afB0QQw-unsplash.jpg" alt="Esquema conceptual de criptosistema de clave pública">
+            </div>
+            
+            <!-- Cuerpo del Artículo (Lorem Ipsum / Estructura Base) -->
+            <section class="entry-body">
+                <p>El criptosistema de clave pública también denominado criptografía asimétrica nace de la necesidad de una solución que la criptografía simétrica dejaba sobre la mesa <strong>obligación de compartir llaves por medio de un canal inseguro</strong>, esto supone un gran riesgo para la seguridad de las partes involucradas, situación que el paradigma de clave privada aborda.</p>
+
+                <h3>Fundamentos del Criptosistema</h3>
+                <p>El criptosistema de clave pública esta basado en el uso de de un par de llaves, una secreta y otra pública, las cuales están matemáticamente vinculadas pero su resolución es a nivel computacional independiente</p>
+                <ul>
+                    <li><strong>Clave Pública</strong><p>Es la clave compartida por de cada usuario que se transporta por la red insegura, su función es cifrar mensajes o validación de firmas digitales, siendo usada por cualquier receptor para enviar mensajes.</p></li>
+                    <li><strong>Clave Privada</strong><p>Esta solo es conocida por el usuario y jamás es compartida, es controlada exclusivamente por el usuario, su función es la descifrar los mensajes recibidos los cuales han sido encriptados con la llave pública y privada del emisor.</p></li>
+                </ul>
+
+                <h3>La necesidad de la clave pública frente al modelo simétrico</h3>
+                <p>Esta criptografía se enceuntra fundamentada en la resolución de logaritmos discretos donde el atacante requeriría de calculos computacionales astronómicos para la obtención de la llave, lo que demuestra una alta seguridad acompañado de una implementación relativamente simple.</p>
+                <p>Finalmente el criptosistema de clave pública elimina el riesgo que supone compartir una llave privada a través de un canal inseguro, emisor y receptor no requieren cononcer ninguna otra llave privada aparte de la propia, sin embargo debido a factores de costo computacional en la práctica a menudo se observa una implementaación híbrida entre criptosistemas de clave pública como de clave privada.</p>
+
+                <!-- Bloque de destaque técnico (Callout) -->
+                <div class="tech-callout">
+                    <strong>Nota de Arquitectura / Desarrollo Seguro:</strong> 
+                    <p>Dentro del desarrollo de proyectos de software es importante tener como regla la gestión del ciclo de vida de las claves, como son el almacenamiento seguro, rotación y seguridad de los entornos, esto es un aspecto fundamental en la seguridad de cualquier sistema de software</p>
+                </div>
+
+                <!-- <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nixon ut dapibus.</p> -->
+            </section>
+
+            <!-- Sección de Referencias APA (Obligatorio por rúbrica) -->
+            <footer class="entry-references">
+                <h3>Referencias Bibliográficas</h3>
+                <ul>
+                    <li>Hernández, L. (2016). <em>La criptografía</em> (pp. 93-134). Editorial CSIC Consejo Superior de Investigaciones Científicas.</li>
+                    <li>Maillo, J. (2017). <em>Sistemas seguros de acceso y transmisión de datos</em> (pp. 76-102). RA-MA Editorial.</li>
+                </ul>
+            </footer>
+        </article>
+
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer id="info">
+        <p><strong>UNIMINUTO</strong> - Corporación Universitaria Minuto de Dios</p>
+        <p>Seguridad en el Desarrollo de Software | Actividad de Cifrado Asimétrico</p>
+        <p>Presentado por: Luis Enrique Ordoñez</p>
+        <p>&copy; 2026</p>
+    </footer>
+
+</body>
+</html>

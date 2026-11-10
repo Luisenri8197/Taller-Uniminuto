@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es el criptosistema de clave pública? | Blog Académico</title>
+    <!-- Enlazamos la misma hoja de estilos general -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar fijo -->
+    <header>
+        <div class="logo-container">
+            <h1>Blog Académico: Caso práctico de aplicación</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal de la Entrada -->
+    <main class="entry-main">
+        
+        <!-- Enlace de retorno -->
+        <div class="back-navigation">
+            <a href="entrada3.html" class="back-navigation-back">&larr; Volver a la sección 3</a>
+            <a href="entrada5.html" class="back-navigation-next">Ir a la sección 5 &rarr;</a>
+        </div>
+
+        <article class="entry-content-box">
+            <!-- Metadatos y Título -->
+            <header class="entry-header">
+                <span class="entry-category">Seguridad en el Desarrollo de Software</span>
+                <h2>Caso práctico de aplicación</h2>
+                <p class="entry-meta">Publicado para la actividad académica de Cifrado Asimétrico | UNIMINUTO</p>
+            </header>
+
+            <!-- Imagen Destacada / Multimedia -->
+            <div class="entry-media">
+                <img src="images/tasha-kostyuk-TtMKq3lJm-U-unsplash.jpg" alt="Esquema conceptual de criptosistema de clave pública">
+            </div>
+
+            <!-- Cuerpo del Artículo (Lorem Ipsum / Estructura Base) -->
+            <section class="entry-body">
+                <p>Con el fin de aterrizar los conceptos vistos en las entradas de este blog, se propone el siguiente caso de aplicación bajo el lenguaje Java.</p>
+
+                <h3>Contexto de caso</h3>
+                <p>Durante el desarrollo de modulos como microservicios, generalmente se ve la necesidad de transmitir tokens para autenticación o bloques de datos firmados para garantizar la integridad y autenticidad del emisor y el mensaje. Para este fin se hará uso de librerías dedicadas de Java como <code>security</code> y <code>crypto</code>, con el fin de demostrar como se pueden generar claves tipo RSA para el cifrado de un mensaje institucional por medio de la clave publica y descifrandolo por medio de clave la privada del receptor.</p>
+
+                <h4>Estructura</h4>
+
+                <p>Bajo una estructura Maven o Gradle se configura la clase principal <code>AsymmetricEncryptionDemo.java</code> la cual ejecuta las siguientes instrucciones.</p>
+
+                <h3>Generación de Claves</h3>
+
+                <p>Se realiza la inicialización de las claves con el algoritmo RSA y una longitud de 2048 bits.</p>
+
+                <pre><p style="color: #e2e8f0;">Java</p><code>
+KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
+keyGen.initialize(2048);
+KeyPair pair = keyGen.generateKeyPair();
+PublicKey publicKey = pair.getPublic();
+PrivateKey privateKey = pair.getPrivate();
+                </code></pre>
+
+                <h3>Cifrado del mensaje</h3>
+
+                <p>Se captura el mensaje a cifrar en texto claro y es procesado mediante una instancia de <code>Cipher</code> inicializada con la clave pública generada.</p>
+
+                <pre><p style="color: #e2e8f0;">Java</p><code>
+Cipher cipher = Cipher.getInstance("RSA");
+cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+byte[] encryptedMessage = cipher.doFinal("Datos confidenciales del sistema".getBytes(StandardCharsets.UTF_8));
+                </code></pre>
+
+                <h3>Descifrado del mensaje</h3>
+
+                <p>Por el lado del receptor, el array de bytes que fué cifrado se revierte haciendo uso exclusivamente de la llave privada que corresponde.</p>
+
+                <pre><p style="color: #e2e8f0;">Java</p><code>
+cipher.init(Cipher.DECRYPT_MODE, privateKey);
+byte[] decryptedMessage = cipher.doFinal(encryptedMessage);
+String originalText = new String(decryptedMessage, StandardCharsets.UTF_8);
+                </code></pre>
+
+                <p>Al realizar el proceso de cifrado y descifrado con ésta metodlogía se puede evidenciar que el mensaje en texto claro fué entregado con éxito, solo mediante el uso de una llave pública y privada exclusiva del emisor y receptor.</p>
+
+                <!-- Bloque de destaque técnico (Callout) -->
+                <div class="tech-callout">
+                    <strong>Nota de Arquitectura / Desarrollo Seguro:</strong> 
+                    <p>A modo ilustrativo, encriptar información por medio de una clave pública hace que solamente quien generó esa llave sea capaz de desencriptar el mensaje, nisiquiera el propio emisor podrá decodificar el criptograma, esto pone en perspectiva lo seguro que es este sistema.</p>
+                </div>
+
+                <!-- <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nixon ut dapibus.</p> -->
+            </section>
+
+            <!-- Sección de Referencias APA (Obligatorio por rúbrica) -->
+            <footer class="entry-references">
+                <h3>Referencias Bibliográficas</h3>
+                <ul>
+                    <li>Hernández, L. (2016). <em>La criptografía</em> (pp. 93-134). Editorial CSIC Consejo Superior de Investigaciones Científicas.</li>
+                    <li>Maillo, J. (2017). <em>Sistemas seguros de acceso y transmisión de datos</em> (pp. 76-102). RA-MA Editorial.</li>
+                </ul>
+            </footer>
+        </article>
+
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer id="info">
+        <p><strong>UNIMINUTO</strong> - Corporación Universitaria Minuto de Dios</p>
+        <p>Seguridad en el Desarrollo de Software | Actividad de Cifrado Asimétrico</p>
+        <p>Presentado por: Luis Enrique Ordoñez</p>
+        <p>&copy; 2026</p>
+    </footer>
+
+</body>
+</html>

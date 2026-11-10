@@ -3,56 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller-Uniminuto</title>
+    <title>Blog-Uniminuto</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <aside>
-        <div>
-            <h1>TITULO 1</h1>
-        </div>
 
+    <!-- Header / Navbar fijo -->
+    <header>
+        <div class="logo-container">
+            <h1>Blog Académico: Cifrado Asimétrico</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre mi</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
             </ul>
         </nav>
-    </aside>
-    <header>
-        <section class="hero">
-            <h2>TITULO 2</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque aliquam, debitis hic unde consectetur nobis quidem. Commodi minima, est similique placeat possimus quaerat deserunt accusantium ea neque unde, a alias?
-            </p>
-            <button>DESCUBRE MAS</button>
-        </section>
     </header>
 
-    <main>
-        <section class="descripcion">
-            <article>
-                <h2>TITULO 3</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorem illum modi voluptates vero consectetur, obcaecati eveniet ut minus nam blanditiis inventore tenetur officiis odio sunt harum. Quisquam, dicta iusto!
-                </p>
+    <!-- Hero Section (Bienvenida) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Seguridad en el Desarrollo de Software</h2>
+            <p>Explorando los fundamentos, algoritmos y buenas prácticas de la criptografía de clave pública en la ingeniería de software moderna.</p>
+        </div>
+    </section>
+
+    <!-- Contenedor Principal de Entradas -->
+    <main id="entradas">
+        <section class="entries-container">
+            <h3>Explorar Entradas del Blog</h3>
+
+            <!-- Tarjeta 1 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <!-- Espacio para icono o imagen representativa -->
+                    <img src="images/andras-vas-Bd7gNnWJBkU-unsplash.jpg" alt="Criptosistema de clave pública">
+                </div>
+                <div class="card-content">
+                    <h4>1. ¿Qué es el criptosistema de clave pública?</h4>
+                    <p>Fundamentos teóricos y la necesidad fundamental de la criptografía asimétrica frente a los retos de seguridad actuales.</p>
+                    <a href="entrada1.html" class="read-more">Ver más &rarr;</a>
+                </div>
             </article>
 
-            <figure class="contenedor-imagen">
-                <img id="imagen-hero" src="images/pexels-flinthuynh-36221361.jpg" alt="Hero imagen">
-                <div id="mensaje-tooltip" class="tooltip">SABER MÁS</div>
-            </figure>
+            <!-- Tarjeta 2 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="images/clint-patterson-dYEuFB8KQJk-unsplash.jpg" alt="Funcionamiento y algoritmos RSA y ECC">
+                </div>
+                <div class="card-content">
+                    <h4>2. Funcionamiento y algoritmos representativos</h4>
+                    <p>Análisis sobre el funcionamiento de las llaves, el cifrado/descifrado y los algoritmos estándar de la industria como RSA, ELGAMAL y ECC.</p>
+                    <a href="entrada2.html" class="read-more">Ver más &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="images/jason-dent-3wPJxh-piRw-unsplash.jpg" alt="Comparativa con cifrado simétrico">
+                </div>
+                <div class="card-content">
+                    <h4>3. Ventajas, desventajas y diferencias con el cifrado simétrico</h4>
+                    <p>Comparación entre ambos modelos criptográficos, evaluando costos computacionales, gestión de llaves y escenarios de aplicación.</p>
+                    <a href="entrada3.html" class="read-more">Ver más &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Tarjeta 4 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="images/keepcoding-lVF2HLzjopw-unsplash.jpg" alt="Caso práctico de aplicación en Java">
+                </div>
+                <div class="card-content">
+                    <h4>4. Caso práctico de aplicación (Java)</h4>
+                    <p>Implementación técnica y validación de entornos seguros utilizando Java, demostrando un flujo de protección de datos.</p>
+                    <a href="entrada4.html" class="read-more">Ver más &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Tarjeta 5 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="images/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg" alt="Recomendaciones y ciclo de vida del software">
+                </div>
+                <div class="card-content">
+                    <h4>5. Observaciones y recomendaciones</h4>
+                    <p>Estrategias de mejora continua e integración de buenas prácticas de seguridad criptográfica a lo largo del ciclo de vida del desarrollo de software.</p>
+                    <a href="entrada5.html" class="read-more">Ver más &rarr;</a>
+                </div>
+            </article>
 
         </section>
     </main>
 
-    <footer>
-        <p>Luis E. Ordoñez</p>
-        <p>Cali, Colombia</p>
-        <p>2026</p>
+    <!-- Footer (Pie de página institucional) -->
+    <footer id="info">
+        <p><strong>UNIMINUTO</strong> - Corporación Universitaria Minuto de Dios</p>
+        <p>Seguridad en el Desarrollo de Software | Actividad de Cifrado Asimétrico</p>
+        <p>Presentado por: Luis Enrique Ordoñez</p>
+        <p>&copy; 2026</p>
     </footer>
-</body>
 </html>
